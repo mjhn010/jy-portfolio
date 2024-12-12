@@ -6,7 +6,7 @@ import leftClick from "../../public/images/left-click.png";
 
 const scrollHandler = () => {
   window.scrollBy({
-    top: 1200,
+    top: 1060,
     left: 0,
     behavior: "smooth",
   });
@@ -18,7 +18,7 @@ export default function ScrollBy() {
       <div>
         <button
           onClick={scrollHandler}
-          className="cursor-pointer flex items-center animate-bounce absolute bottom-20 right-1/2"
+          className="cursor-pointer flex items-center animate-bounce"
         >
           <Image src={doubleArrow} alt="다운화살표" width={40} height={40} />
           <span className="flex items-center">

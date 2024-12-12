@@ -1,32 +1,33 @@
-import Image from "next/image";
-import Link from "next/link";
-import profileIcon from "@../../../public/images/profile.png";
-import homeIcon from "@../../../public/images/home.png";
-import emailIcon from "@../../../public/images/mail.png";
-import gitHubIcon from "@../../../public/images/social.png";
-import htmlIcon from "../../public/images/294678_html5_icon.ico";
-import cssIcon from "../../public/images/317756_badge_css_css3_achievement_award_icon.png";
-import jsIcon from "../../public/images/4373213_js_logo_logos_icon.png";
-import tsIcon from "../../public/images/typescript.png";
-import reactIcon from "../../public/images/7423888_react_react native_icon.png";
-import reactQueryIcon from "../../public/images/react-query-seeklogo.svg";
-import zustandIcon from "../../public/images/218346783-72be5ae3-b953-4dd7-b239-788a882fdad6.svg";
-import tailwindIcon from "../../public/images/tailwind-css.svg";
-import nextIcon from "../../public/images/nextjs_icon_132160.svg";
-import firebaseIcon from "../../public/images/firebase-svgrepo-com.svg";
-import figmaIcon from "../../public/images/figma-svgrepo-com.svg";
-import mySqlIcon from "../../public/images/mysql-svgrepo-com.svg";
-import vercelIcon from "../../public/images/vercel-svgrepo-com.svg";
-import jiraIcon from "../../public/images/atlassian-svgrepo-com.svg";
-import notionIcon from "../../public/images/notion-svgrepo-com.svg";
-import slackIcon from "../../public/images/slack-svgrepo-com.svg";
-import doubleArrow from "../../public/images/CaretDoubleDown.svg";
-import leftClick from "../../public/images/left-click.png";
-import ScrollBy from "./ScrollBy";
+import Image from 'next/image';
+import Link from 'next/link';
+import profileIcon from '@../../../public/images/profile.png';
+import homeIcon from '@../../../public/images/home.png';
+import emailIcon from '@../../../public/images/mail.png';
+import gitHubIcon from '@../../../public/images/social.png';
+import htmlIcon from '../../public/images/294678_html5_icon.ico';
+import cssIcon from '../../public/images/317756_badge_css_css3_achievement_award_icon.png';
+import jsIcon from '../../public/images/4373213_js_logo_logos_icon.png';
+import tsIcon from '../../public/images/typescript.png';
+import reactIcon from '../../public/images/7423888_react_react native_icon.png';
+import reactQueryIcon from '../../public/images/react-query-seeklogo.svg';
+import zustandIcon from '../../public/images/218346783-72be5ae3-b953-4dd7-b239-788a882fdad6.svg';
+import tailwindIcon from '../../public/images/tailwind-css.svg';
+import nextIcon from '../../public/images/nextjs_icon_132160.svg';
+import firebaseIcon from '../../public/images/firebase-svgrepo-com.svg';
+import figmaIcon from '../../public/images/figma-svgrepo-com.svg';
+import mySqlIcon from '../../public/images/mysql-svgrepo-com.svg';
+import vercelIcon from '../../public/images/vercel-svgrepo-com.svg';
+import jiraIcon from '../../public/images/atlassian-svgrepo-com.svg';
+import notionIcon from '../../public/images/notion-svgrepo-com.svg';
+import slackIcon from '../../public/images/slack-svgrepo-com.svg';
+import doubleArrow from '../../public/images/CaretDoubleDown.svg';
+import leftClick from '../../public/images/left-click.png';
+import ScrollBy from './ScrollBy';
+import supaBase from '../../public/images/supabase-seeklogo.svg';
 export default function Info() {
   return (
     <>
-      <section className="min-h-screen flex relative justify-center items-center">
+      <section className="min-h-screen bg-slate-50 flex relative justify-center items-center">
         <div className="flex w-full gap-6 container">
           <div className="flex flex-col items-center gap-8 shadow-md border border-solid border-slate-200 rounded-lg px-20 py-8">
             <h1 className="text-[28px] font-bold">ABOUT ME</h1>
@@ -196,6 +197,14 @@ export default function Info() {
                         alt="vercelIcon"
                       />
                     </div>
+                    <div>
+                      <Image
+                        src={supaBase}
+                        width={75}
+                        height={75}
+                        alt="supaBase"
+                      />
+                    </div>
                   </div>
                 </div>
                 <div className="flex items-start gap-3 w-full">
@@ -248,7 +257,9 @@ export default function Info() {
             </div>
           </div>
         </div>
-        <ScrollBy />
+        <div className=" absolute bottom-[30px] right-[46%]">
+          <ScrollBy />
+        </div>
       </section>
     </>
   );

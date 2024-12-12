@@ -10,6 +10,20 @@ export default function Main() {
   const fullText = "안 녕하세요! FrontEnd Developer 윤준영입니다.";
   const [text, setText] = useState("");
   const [prompt, setPrompt] = useState("");
+  const scrollHandler = () => {
+    window.scrollBy({
+      top: 1080,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
+  const projectBtn = () => {
+    window.scrollBy({
+      top: 1700,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
   useEffect(() => {
     const interval = setInterval(() => {
       if (textCountRef.current < fullText.length - 1) {
@@ -29,6 +43,7 @@ export default function Main() {
 
     return () => clearInterval(promptHandler);
   }, [fullText]);
+
   return (
     <>
       <section className="text-gray-600 body-font min-h-screen flex flex-col items-center justify-center relative">
@@ -49,7 +64,10 @@ export default function Main() {
               꾸준히 노력할 것입니다.
             </p>
             <div className="flex justify-center">
-              <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+              <button
+                onClick={projectBtn}
+                className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+              >
                 프로젝트보러가기
               </button>
             </div>
@@ -58,7 +76,12 @@ export default function Main() {
             {/* <Image /> */}
           </div>
         </div>
-        <ScrollBy />
+        <div
+          onClick={scrollHandler}
+          className="bottom-[70px] right-[46%] absolute"
+        >
+          <ScrollBy />
+        </div>
       </section>
     </>
   );
