@@ -6,12 +6,12 @@ import FlawDetectorIcon from '../../public/images/bug.svg';
 export default function ProjectCard() {
   return (
     <>
-      <div className="max-h-[600px] flex flex-col items-center gap-8 shadow-md border border-solid border-slate-200 rounded-lg pb-8 ">
+      <div className="max-[1024px]:w-[350px] max-h-[600px] w-[100%] flex flex-col items-center gap-8 shadow-md border border-solid border-slate-200 rounded-lg pb-8 ">
         {/* 이미지 */}
         <div>
           <Image src={flawbg} alt="프로젝트 배경" />
         </div>
-        <div className="px-4 flex flex-col gap-3">
+        <div className="px-4 flex flex-col gap-3 w-[100%]">
           <h1>FlawDetector</h1>
           <div className="flex flex-col gap-4">
             <p className="text-gray-400">
@@ -51,7 +51,7 @@ export default function ProjectCard() {
               </Link>
             </div>
           </div>
-          <div className="flex gap-1 justify-center">
+          <div className="flex gap-1 flex-wrap justify-center">
             <span className="bg-black text-[#FFFFFF] text-[14px] py-[4px] px-2 rounded-[10px]">
               Next.js
             </span>

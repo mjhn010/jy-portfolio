@@ -28,7 +28,7 @@ export default function Info() {
   return (
     <>
       <section className="min-h-screen bg-slate-50 flex relative justify-center items-center">
-        <div className="flex w-full gap-6 container">
+        <div className="flex w-full gap-6 container max-[1024px]:flex-col">
           <div className="flex flex-col items-center gap-8 shadow-md border border-solid border-slate-200 rounded-lg px-20 py-8">
             <h1 className="text-[28px] font-bold">ABOUT ME</h1>
             <ul className=" flex flex-col gap-8">
@@ -257,7 +257,7 @@ export default function Info() {
             </div>
           </div>
         </div>
-        <div className=" absolute bottom-[30px] right-[46%]">
+        <div className="absolute bottom-[30px] right-[46%] max-[1024px]:hidden">
           <ScrollBy />
         </div>
       </section>
