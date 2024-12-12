@@ -1,15 +1,21 @@
-import Footer from "@/component/Footer";
-import Header from "@/component/Header";
-import Info from "@/component/Info";
-import Main from "@/component/Main";
+import Footer from '@/component/Footer';
+import Header from '@/component/Header';
+import Info from '@/component/Info';
+import Main from '@/component/Main';
+import Project from '@/component/Project';
+import ChatBot from '@/component/chatBot/ChatBot';
 
 export default function page() {
   return (
     <>
-      <Header />
-      <Main />
-      <Info />
-      <Footer />
+      <div className="relative">
+        <Header />
+        <Main />
+        <Info />
+        <Project />
+        <ChatBot />
+        <Footer />
+      </div>
     </>
   );
 }
